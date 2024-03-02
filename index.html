@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReTro</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="max-w-[1170px] mx-auto">
+      <!-- Navbar -->
+      <nav class="mt-4">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-16 gap-2"
+              >
+                <li>
+                  <a
+                    data-tip="Home"
+                    class="border rounded-full border-gray-400 p-4 bg-gray-100 tooltip"
+                    ><img src="images/home.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    data-tip="Post"
+                    class="border rounded-full border-gray-400 p-4 bg-gray-100 tooltip"
+                    ><img src="images/pencil.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    data-tip="Add User"
+                    class="border rounded-full border-gray-400 p-4 bg-gray-100 tooltip"
+                    ><img src="images/adduser.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    data-tip="Bookmark"
+                    class="border rounded-full border-gray-400 p-4 bg-gray-100 tooltip"
+                    ><img src="images/flag.svg" alt=""
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-3xl font-black p-0">ReTro</a>
+          </div>
+          <div class="navbar-end">
+            <div class="hidden lg:flex">
+              <ul class="menu menu-horizontal px-6 gap-3">
+                <li>
+                  <a
+                    data-tip="Home"
+                    class="border rounded-full border-gray-400 p-4 bg-gray-100 tooltip"
+                    ><img src="images/home.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    data-tip="Post"
+                    class="border rounded-full border-gray-400 p-4 bg-gray-100 tooltip"
+                    ><img src="images/pencil.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    data-tip="Add User"
+                    class="border rounded-full border-gray-400 p-4 bg-gray-100 tooltip"
+                    ><img src="images/adduser.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    data-tip="Bookmark"
+                    class="border rounded-full border-gray-400 p-4 bg-gray-100 tooltip"
+                    ><img src="images/flag.svg" alt=""
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <a
+              class="btn bg-[#797DFC] rounded-3xl text-white lg:px-10 text-xl lg:py-4 lg:h-16"
+              >Sign In</a
+            >
+          </div>
+        </div>
+      </nav>
+      <!-- Banner Section -->
+      <section
+        class="flex justify-between items-center bg-[#12132D] bg-[url(./images/bgbanner.png)] bg-bottom bg-no-repeat p-20 rounded-3xl mt-[40px]"
+      >
+        <div class="">
+          <h2 class="text-white font-black text-[64px]">
+            Welcome to the <br />
+            <span
+              class="bg-clip-text text-transparent bg-gradient-to-r from-[#797DFC] to-[#343672]"
+              >ReTro</span
+            >
+            Forum
+          </h2>
+          <p class="text-[#FFFFFFCC] font-normal text-xl leading-9">
+            Share your favorite opinion and win and wp <br />
+            forum coffee mug!
+          </p>
+          <div>
+            <label
+              class="input input-bordered flex items-center gap-2 rounded-3xl w-[400px] mt-8"
+            >
+              <input
+                type="text"
+                class="grow"
+                placeholder="Search here anything"
+              />
+              <span class=""
+                ><button class="px-7 py-2 text-white rounded-3xl bg-[#797DFC]">
+                  Search
+                </button></span
+              >
+            </label>
+          </div>
+        </div>
+        <div class="flex bg-white rounded-2xl p-12 w-[370px] text-2xl gap-14">
+          <div>
+            <p>Registered Users</p>
+            <p class="mt-6">Forum</p>
+            <p class="mt-6">Topics</p>
+            <p class="mt-6">Replies</p>
+          </div>
+          <div>
+            <p>01</p>
+            <p class="mt-6">05</p>
+            <p class="mt-6">01</p>
+            <p class="mt-6">01</p>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <!-- Let's Discuss Section -->
+      <section></section>
+    </main>
+    <footer></footer>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
