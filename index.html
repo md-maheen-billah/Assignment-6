@@ -173,13 +173,24 @@
             integrated testing features allow for a streamlined .
           </p>
         </div>
-        <div>
+        <div class="flex gap-8">
           <div id="div-left" class="w-8/12"></div>
-          <div id="div-right" class="w-4/12"></div>
+          <div class="w-4/12">
+            <div id="div-right" class="p-6 bg-[#F3F3F5] rounded-3xl">
+              <div class="flex items-center justify-between">
+                <h2>Title</h2>
+                <div class="flex items-center gap-2">
+                  <img src="images/Frame.svg" alt="" />
+                  <p>Mark as read (<span id="mark-as">0</span>)</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
     <footer></footer>
     <script src="scripts/index.js"></script>
+    <script src="scripts/utility.js"></script>
   </body>
 </html>

@@ -34,12 +34,36 @@ const loadPosts = async () => {
                             <div class="flex gap-2 items-center"><img src="images/tabler-icon-eye.svg" alt=""><p>${item.view_count}</p></div>
                             <div class="flex gap-2 items-center"><img src="images/tabler-icon-clock-hour-9.svg" alt=""><p>${item.posted_time}</p></div>
                         </div>
-                        <div><button><img src="images/email 1.svg" alt=""></button></div>
+                        <div><button id="${item.id}" class="add-btn"><img src="images/email 1.svg" alt=""></button></div>
                     </div>
                 </div>
             </div>
     `;
     postContainer.appendChild(divPost);
+
+    const id = document.getElementById(item.id);
+    id.addEventListener("click", makePink);
+
+    function makePink() {
+      let counter = parseInt(document.getElementById("mark-as").innerText);
+      counter = counter + 1;
+      const readContainer = document.getElementById("div-right");
+      const divSeen = document.createElement("div");
+      const markT = document.getElementById("mark-as");
+      markT.innerText = counter;
+      divSeen.innerHTML = `
+      <div
+              class="bg-white rounded-3xl p-4 mt-4 flex justify-between"
+            >
+              <h2 class="text-[16px] text- font-semibold w-48">${item.title}</h2>
+              <div class="flex gap-2 items-center">
+                <img src="images/tabler-icon-eye.svg" alt="" />
+                <p>(${item.view_count})</p>
+              </div>
+            </div>
+    `;
+      readContainer.appendChild(divSeen);
+    }
   });
 };
 loadPosts();
