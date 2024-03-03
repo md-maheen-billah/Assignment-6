@@ -3,9 +3,8 @@ const loadPosts = async () => {
     "https://openapi.programming-hero.com/api/retro-forum/posts"
   );
   const data = await response.json();
-  setTimeout(function () {
-    toggleLoadingSpinner();
-  }, 2000);
+  const markR = document.getElementById("div-right");
+  markR.classList.remove("hidden");
   data.posts.forEach((item) => {
     const postContainer = document.getElementById("div-left");
     let activePart = "";
@@ -71,15 +70,13 @@ const loadPosts = async () => {
 };
 
 const loadCategory = async (searchText) => {
-  const postContainer = document.getElementById("div-left");
-  postContainer.textContent = "";
   const response = await fetch(
     `https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchText}`
   );
   const data = await response.json();
-  setTimeout(function () {
-    toggleLoadingSpinner();
-  }, 2000);
+  const markR = document.getElementById("div-right");
+  markR.classList.remove("hidden");
+  toggleLoadingSpinner();
   data.posts.forEach((item) => {
     const postContainer = document.getElementById("div-left");
     let activePart = "";
@@ -143,7 +140,11 @@ const loadCategory = async (searchText) => {
     }
   });
 };
-loadPosts();
+
+setTimeout(function () {
+  loadPosts();
+  toggleLoadingSpinner();
+}, 2000);
 
 const toggleLoadingSpinner = () => {
   const loadingSpinner = document.getElementById("loading-spinner");
@@ -153,8 +154,14 @@ const toggleLoadingSpinner = () => {
 const handleSearch = () => {
   const searchField = document.getElementById("search-txt");
   const searchText = searchField.value;
+  const postContainer = document.getElementById("div-left");
+  postContainer.textContent = "";
   console.log(searchText);
-  loadCategory(searchText);
+  setTimeout(function () {
+    loadCategory(searchText);
+  }, 2000);
   const loadingSpinner = document.getElementById("loading-spinner");
   loadingSpinner.classList.remove("hidden");
+  const markR = document.getElementById("div-right");
+  markR.classList.add("hidden");
 };
