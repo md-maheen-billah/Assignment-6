@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ReTro</title>
+    <title>MeTro</title>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
       rel="stylesheet"
@@ -68,7 +68,7 @@
                 </li>
               </ul>
             </div>
-            <a class="btn btn-ghost text-3xl font-black p-0">ReTro</a>
+            <a class="btn btn-ghost text-3xl font-black p-0">MeTro</a>
           </div>
           <div class="navbar-end">
             <div class="hidden lg:flex">
@@ -112,44 +112,48 @@
       </nav>
       <!-- Banner Section -->
       <section
-        class="flex justify-between items-center bg-[#12132D] bg-[url(./images/bgbanner.png)] p-20 rounded-3xl mt-[40px]"
+        class="flex flex-col gap-4 w-[90%] lg:w-full mx-auto lg:mx-0 lg:gap-0 lg:flex-row lg:justify-between items-center bg-[#12132D] lg:bg-[url(./images/bgbanner.png)] lg:bg-bottom bg-no-repeat p-4 lg:p-20 rounded-3xl mt-5 lg:mt-[40px]"
       >
-        <div class="">
-          <h2 class="text-white font-black text-[64px]">
+        <div class="w-full lg:w-[50%]">
+          <h2 class="text-white font-black text-[18px] lg:text-[64px]">
             Welcome to the <br />
             <span
               class="bg-clip-text text-transparent bg-gradient-to-r from-[#797DFC] to-[#343672]"
-              >ReTro</span
+              >MeTro</span
             >
             Forum
           </h2>
-          <p class="text-[#FFFFFFCC] font-normal text-xl leading-9">
-            Share your favorite opinion and win and wp <br />
-            forum coffee mug!
+          <p
+            class="text-[#FFFFFFCC] font-normal text-[14px] lg:text-xl lg:leading-9 mt-5"
+          >
+            Share your favorite opinion and win and wp forum coffee mug!
           </p>
-          <div>
+          <div
+            class="bg-white flex items-center rounded-3xl w-full mt-6 lg:px-2"
+          >
             <label
-              class="input input-bordered flex items-center gap-2 rounded-3xl w-[400px] mt-8 py-[28px]"
+              class="flex items-center lg:gap-2 rounded-3xl lg:w-[400px] lg:py-[8px] w-10/12"
             >
               <input
                 id="search-txt"
                 type="text"
-                class="grow"
+                autocomplete="off"
+                class="placeholder:text-[14px] lg:placeholder:text-base focus:outline-none focus: rounded-3xl lg:py-[8px] pl-2 ml-2 w-11/12"
                 placeholder="Search here anything"
               />
-              <span class=""
-                ><button
-                  onclick="handleSearch()"
-                  id="search-btn"
-                  class="btn px-7 py-2 text-white rounded-3xl bg-[#797DFC]"
-                >
-                  Search
-                </button></span
-              >
             </label>
+            <button
+              onclick="handleSearch()"
+              id="search-btn"
+              class="btn lg:px-8 text-white rounded-3xl bg-[#797DFC]"
+            >
+              Search
+            </button>
           </div>
         </div>
-        <div class="flex bg-white rounded-2xl p-12 w-[370px] text-2xl gap-14">
+        <div
+          class="flex justify-between bg-white rounded-2xl p-4 lg:p-12 w-full lg:w-[370px] text-[14px] lg:text-2xl gap-14"
+        >
           <div>
             <p>Registered Users</p>
             <p class="mt-6">Forum</p>
@@ -167,13 +171,12 @@
     </header>
     <main class="max-w-[1170px] mx-auto">
       <!-- Let's Discuss Section -->
-      <section class="mt-24">
+      <section class="mt-10 lg:mt-24 w-[90%] lg:w-full mx-auto">
         <div class="text-center">
           <h2 class="font-black text-[40px]">Let's Discuss</h2>
           <p class="text-[#12132D99] font-normal text-lg leading-7 mt-6 mb-12">
             Yes, you can run unit tests and view the results directly within the
-            app. The <br />
-            integrated testing features allow for a streamlined .
+            app. The integrated testing features allow for a streamlined .
           </p>
         </div>
         <div class="text-center">
@@ -182,9 +185,9 @@
             class="loading loading-spinner loading-lg mb-12"
           ></span>
         </div>
-        <div class="flex gap-8">
-          <div id="div-left" class="w-8/12"></div>
-          <div class="w-4/12">
+        <div class="flex flex-col lg:flex-row gap-8">
+          <div id="div-left" class="w-full lg:w-8/12"></div>
+          <div class="w-full lg:w-4/12">
             <div id="div-right" class="p-6 bg-[#F3F3F5] rounded-3xl hidden">
               <div class="flex items-center justify-between">
                 <h2>Title</h2>
@@ -198,7 +201,7 @@
         </div>
       </section>
       <!-- Join Our Forum Section -->
-      <section class="mt-24 bg-[#12132D] rounded-3xl flex p-10">
+      <section class="mt-24 bg-[#12132D] rounded-3xl flex p-10 hidden">
         <div class="w-[70%] mt-4 p-16">
           <h2 class="text-[40px] font-black mb-4 text-white">Join Our Forum</h2>
           <p class="text-lg text-[#FFFFFFCC] font-normal leading-7 mb-8">
@@ -214,7 +217,7 @@
         <div><img src="images/joinforum.png" alt="" /></div>
       </section>
       <!-- Latest Posts -->
-      <section class="mt-24">
+      <section class="mt-24 hidden">
         <div class="text-center">
           <h2 class="font-black text-[40px]">Latest Posts</h2>
           <p class="text-[#12132D99] font-normal text-lg leading-7 mt-6 mb-12">
@@ -223,10 +226,20 @@
             integrated testing features allow for a streamlined .
           </p>
         </div>
+        <div class="text-center">
+          <span
+            id="loading-spinner2"
+            class="loading loading-spinner loading-lg mb-12"
+          ></span>
+        </div>
+        <div
+          id="latest-posts"
+          class="grid grid-cols-1 lg:grid-cols-3 gap-6"
+        ></div>
       </section>
     </main>
     <footer></footer>
-    <script src="scripts/index.js"></script>
-    <script src="scripts/utility.js"></script>
+    <script src="scripts/allPosts.js"></script>
+    <script src="scripts/latestPost.js"></script>
   </body>
 </html>
