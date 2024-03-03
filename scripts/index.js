@@ -5,10 +5,21 @@ const loadPosts = async () => {
   const data = await response.json();
   data.posts.forEach((item) => {
     const postContainer = document.getElementById("div-left");
+    let activePart = "";
+    if (item.isActive) {
+      activePart = `<div
+        class=" w-4 h-4 rounded-full bg-[#10B981] absolute left-[80%]"
+      ></div>`;
+    } else {
+      activePart = `<div
+        class=" w-4 h-4 rounded-full bg-[#FF3434] absolute left-[80%]"
+      ></div>`;
+    }
     const divPost = document.createElement("div");
     divPost.innerHTML = `
     <div class="flex bg-[#F3F3F5] p-10 rounded-3xl gap-6 mb-6">
-                <div class="w-20 h-20  rounded-3xl">
+                <div class="w-20 h-20 rounded-3xl relative">
+                ${activePart}
                     <img class="rounded-3xl" src="${item.image}" alt="">
                 </div>
                 <div class="w-full">
