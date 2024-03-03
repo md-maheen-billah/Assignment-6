@@ -44,9 +44,9 @@ const loadPosts = async () => {
     postContainer.appendChild(divPost);
 
     const id = document.getElementById(item.id);
-    id.addEventListener("click", makePink);
+    id.addEventListener("click", makeRead);
 
-    function makePink() {
+    function makeRead() {
       let counter = parseInt(document.getElementById("mark-as").innerText);
       counter = counter + 1;
       const readContainer = document.getElementById("div-right");
@@ -116,9 +116,9 @@ const loadCategory = async (searchText) => {
     postContainer.appendChild(divPost);
 
     const id = document.getElementById(item.id);
-    id.addEventListener("click", makePink);
+    id.addEventListener("click", makeRead);
 
-    function makePink() {
+    function makeRead() {
       let counter = parseInt(document.getElementById("mark-as").innerText);
       counter = counter + 1;
       const readContainer = document.getElementById("div-right");
@@ -162,7 +162,6 @@ const handleSearch = () => {
   const searchText = searchField.value;
   const postContainer = document.getElementById("div-left");
   postContainer.textContent = "";
-  console.log(searchText);
   setTimeout(function () {
     loadCategory(searchText);
   }, 2000);
