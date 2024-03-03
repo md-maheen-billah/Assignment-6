@@ -7,7 +7,7 @@ const loadLatestPosts = async () => {
     const latestPostContainer = document.getElementById("latest-posts");
     const divLatestPost = document.createElement("div");
     divLatestPost.innerHTML = `
-    <div class="p-6 rounded-3xl border h-[470px]">
+    <div class="p-6 rounded-3xl border lg:h-[470px]">
     <img
       class="w-[326px] h-[190px] rounded-2xl"
       src="${item.cover_image}"
